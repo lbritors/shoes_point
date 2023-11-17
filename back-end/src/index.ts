@@ -2,6 +2,7 @@ import  { Express } from "express";
 import express from "express";
 import cors from "cors";
 import clientRouter from "./routes/client.routes";
+import categoryRouter from "./routes/categories.routes";
 
 
 const app = express();
@@ -12,6 +13,7 @@ app.get("/health", (req, res) => {
   res.send("OK");
 });
 app.use(clientRouter);
+app.use(categoryRouter);
 
 
 
