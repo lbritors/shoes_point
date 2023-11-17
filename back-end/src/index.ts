@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import clientRouter from "./routes/client.routes";
 import categoryRouter from "./routes/categories.routes";
+import productRouter from "./routes/products.routes";
 
 
 const app = express();
@@ -14,7 +15,7 @@ app.get("/health", (req, res) => {
 });
 app.use(clientRouter);
 app.use(categoryRouter);
-
+app.use(productRouter);
 
 
 app.listen(4000, () => {
